@@ -3,18 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Messagerie V2 — Accueil</title>
+  <title>Se connecter — Messagerie V2</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="center-card">
-    <h1>Messagerie V2</h1>
-    <p class="muted">Simple — Privé — Stylé</p>
-    <div class="buttons">
-      <a class="btn" href="index.html">Connexion</a>
-      <a class="btn ghost" href="chat.html">Entrer (démo)</a>
-    </div>
+    <h2>Connexion</h2>
+    <form id="loginForm" class="form">
+      <div class="row">
+        <input id="name" placeholder="Prénom" autocomplete="given-name" required />
+      </div>
+      <div class="row">
+        <input id="surname" placeholder="Nom" autocomplete="family-name" required />
+      </div>
+      <div class="row">
+        <input id="code" placeholder="Code secret" type="password" required />
+      </div>
+      <div class="row">
+        <button class="btn" type="submit">Se connecter</button>
+      </div>
+      <p class="muted small">Ton code est utilisé comme identifiant unique — choisis-en un simple.</p>
+    </form>
   </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="login.js"></script>
 </body>
 </html>
-
