@@ -1,1 +1,16 @@
 
+{
+  "name": "messagerie-v2",
+  "version": "1.0.0",
+  "description": "Messagerie V2 - chat privé simple (nom, prénom, code)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.8.1"
+  }
+}
