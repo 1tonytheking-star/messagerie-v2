@@ -1,1 +1,40 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chat — Messagerie V2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <div class="brand">
+        <h3>Messagerie V2</h3>
+      </div>
+      <div id="me" class="me"></div>
+      <div class="search">
+        <input id="filter" placeholder="Rechercher un contact..." />
+      </div>
+      <ul id="users" class="users"></ul>
+      <div class="logout">
+        <button id="logoutBtn" class="btn ghost">Se déconnecter</button>
+      </div>
+    </aside>
+
+    <main id="main">
+      <div id="conversationHeader" class="conversation-header">Sélectionne un utilisateur</div>
+      <section id="messages" class="messages"></section>
+
+      <form id="messageForm" class="message-form">
+        <input id="messageInput" placeholder="Écrire un message..." autocomplete="off" />
+        <button class="btn" type="submit">Envoyer</button>
+      </form>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>
 
